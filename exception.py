@@ -1,9 +1,11 @@
-ef read_int(min, max):
-        val=int(input("enter the value between -10 and 10:"))
-        if val<=max and val>=min:
+def read_int(min, max):
+        try:
+                val=int(input("enter the value between -10 and 10:"))
+                assert val<=max and val>=min
                 return val
-        else:
-                raise AssertionError
+                
+        except:
+                raise 
             
 while True:            
         try:
